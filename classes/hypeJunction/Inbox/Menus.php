@@ -205,7 +205,7 @@ class Menus {
 				$return[] = ElggMenuItem::factory([
 					'name' => "inbox:$type",
 					'text' => elgg_echo("inbox:send", [strtolower(elgg_echo("item:object:message:$type:singular"))]),
-					'href' => elgg_http_add_url_query_elements("messages/compose", [
+					'href' => elgg_http_add_url_query_elements("messages/add", [
 						'message_type' => $type,
 						'send_to' => $recipient->guid
 					]),
